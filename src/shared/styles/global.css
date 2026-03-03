@@ -1,0 +1,16 @@
+:root {
+  --asset-base-url: '';
+  --bg-main: url(var(--asset-base-url)/img/template/bg.png);
+  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  background-image: var(--bg-main);
+  background-size: cover;
+}
+
+#root {
+  padding: 2rem;
+}
