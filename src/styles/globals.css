@@ -1,0 +1,45 @@
+:root {
+  font-family: Inter, system-ui, Arial, sans-serif;
+  color: #0f172a;
+  background: #f6f8fc;
+}
+
+* { box-sizing: border-box; }
+body { margin: 0; background: #f6f8fc; }
+
+.app-shell header { position: sticky; top: 0; background: #fff; border-bottom: 1px solid #e5e7eb; z-index: 10; }
+.topbar { height: 56px; display: flex; align-items: center; justify-content: space-between; padding: 0 16px; }
+.brand { font-size: 1rem; }
+.topbar-actions, .row { display: flex; gap: 8px; align-items: center; }
+.wrap { flex-wrap: wrap; }
+.between { justify-content: space-between; }
+
+.page-content { max-width: 1024px; margin: 0 auto; padding: 16px; padding-bottom: 88px; }
+.grid-gap { display: grid; gap: 16px; }
+.card { background: #fff; border: 1px solid #e5e7eb; border-radius: 12px; padding: 16px; }
+.muted { color: #64748b; margin: 4px 0; }
+.list-row { display: flex; align-items: center; justify-content: space-between; gap: 12px; border-bottom: 1px solid #f1f5f9; padding: 10px 0; }
+.list-row:last-child { border-bottom: 0; }
+.clickable { cursor: pointer; }
+
+button, input, select { font: inherit; }
+button { border-radius: 8px; border: 1px solid #d1d5db; background: #fff; padding: 8px 12px; cursor: pointer; }
+button.primary { border-color: #4f46e5; background: #4f46e5; color: white; }
+input, select { width: 100%; max-width: 320px; border: 1px solid #d1d5db; border-radius: 8px; padding: 8px 10px; margin-top: 6px; }
+label { display: grid; gap: 4px; }
+
+.pill { background: #eef2ff; color: #3730a3; padding: 4px 10px; border-radius: 999px; font-size: 0.85rem; }
+.cards-grid { display: grid; gap: 16px; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); }
+.donut { width: 180px; height: 180px; border-radius: 50%; margin: 12px auto; display: grid; place-items: center; position: relative; }
+.donut::after { content: ''; width: 110px; height: 110px; border-radius: 50%; background: #fff; position: absolute; }
+.donut span { z-index: 1; font-weight: 700; }
+.range-track { height: 18px; border-radius: 999px; background: #e2e8f0; position: relative; overflow: hidden; }
+.range-bar { position: absolute; top: 0; height: 100%; border-radius: 999px; background: #22c55e; }
+
+.bottom-nav { position: fixed; bottom: 0; left: 0; right: 0; background: #fff; border-top: 1px solid #e5e7eb; display: flex; gap: 8px; padding: 8px; }
+.bottom-nav button { flex: 1; }
+.bottom-nav .active { background: #4f46e5; color: #fff; border-color: #4f46e5; }
+
+@media (min-width: 768px) {
+  .bottom-nav { display: none; }
+}
